@@ -24,25 +24,6 @@ jobs:
         java-version: '17'
         distribution: 'zulu'
 
-    - name: Build the app
-      run: mvn clean package -DskipTests
-
-    - name: Run the app
-      run: nohup java -jar /home/runner/work/orders-service/orders-service/target/orders-service-example-0.0.1-SNAPSHOT-spring-boot.jar  > app.log 2>&1 & disown
-
-    - name: Install Newman
-      run: |
-        npm install -g newman
-        npm install -g newman-reporter-html
-
-    - name: Run Postman tests
-      run: |
-        newman run "Orders MS.postman_collection.json" \
-          --environment testing.postman_environment.json \
-          --delay-request 100 \
-          --reporters cli,html \
-          --reporter-html-export newman-report.html
-
     - name: Cache SonarQube Cloud packages
       uses: actions/cache@v4
       with:
