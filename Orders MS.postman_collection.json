@@ -1,0 +1,57 @@
+{
+	"info": {
+		"_postman_id": "8e8d9ac5-efd5-4716-81b4-7de54cc0cd7f",
+		"name": "Orders MS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14224057",
+		"_collection_link": "https://speeding-eclipse-403714.postman.co/workspace/My-Workspace~ce7698d8-0037-4956-8b27-8591f852b321/collection/14224057-8e8d9ac5-efd5-4716-81b4-7de54cc0cd7f?action=share&source=collection_link&creator=14224057"
+	},
+	"item": [
+		{
+			"name": "GET orders",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_GATEWAY_IP}}/orders",
+					"host": [
+						"{{API_GATEWAY_IP}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_GATEWAY_IP",
+			"value": "localhost:8080",
+			"type": "string"
+		}
+	]
+}
