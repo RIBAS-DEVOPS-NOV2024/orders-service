@@ -28,7 +28,7 @@ jobs:
       run: mvn clean package -DskipTests
 
     - name: Run the app
-      run: nohup java -jar /home/runner/work/orders-service/orders-service/target/orders-service-example-0.0.1-SNAPSHOT-spring-boot.jar https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main > app.log 2>&1 & disown
+      run: nohup java -jar /home/runner/work/orders-service/orders-service/target/orders-service-example-0.0.1-SNAPSHOT-spring-boot.jar https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main/payments https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main/shipping https://dz1xa3bms0.execute-api.us-east-1.amazonaws.com/main/products > app.log 2>&1 & disown
 
     - name: Run Postman tests
       run: |
